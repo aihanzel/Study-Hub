@@ -1,0 +1,175 @@
+/* Global Page Theme */
+body {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  background-color: #fef7fb;
+  color: #3a2d2d;
+  margin: 0;
+  padding: 0;
+  line-height: 1.8;
+  overflow-x: hidden;
+}
+
+/* Header */
+header {
+  background-color: #a07bd1;
+  color: #fffdf9;
+  text-align: center;
+  padding: 40px 20px;
+  border-bottom: 4px dashed #d99acb;
+  box-shadow: 0 4px 10px rgba(160, 123, 209, 0.2);
+  animation: fadeIn 1.2s ease-out;
+}
+
+header h1 {
+  font-size: 2.8em;
+  text-shadow: 0 0 4px #d9c4ec;
+  letter-spacing: 1px;
+}
+
+header p {
+  font-style: italic;
+  font-size: 1.1em;
+  opacity: 0.9;
+}
+
+/* Navigation Menu */
+nav ul {
+  list-style: none;
+  text-align: center;
+  margin: 30px 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul a {
+  color: #7744a3;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+nav ul a:hover {
+  color: #d266b4;
+  text-decoration: underline;
+}
+
+/* Section Base Styling */
+main section {
+  max-width: 850px;
+  background-color: #f7eaf6;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 14px;
+  border: 2px dashed #c29ccf;
+  box-shadow: 0 2px 6px rgba(100, 50, 150, 0.08);
+  animation: slideIn 1s ease-in;
+}
+
+section h2 {
+  font-size: 2em;
+  color: #6c3a96;
+  border-bottom: 1px dotted #c9a4cb;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* List Formatting */
+section ul {
+  list-style: none;
+  padding: 0;
+}
+
+section ul li {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+/* Memories Photo Grid */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.photo-grid img {
+  width: 100%;
+  max-width: 180px;
+  border-radius: 12px;
+  border: 3px solid #d99acb;
+  box-shadow: 0 4px 10px rgba(160, 100, 200, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.photo-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Pop-Up Greeting */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 240, 248, 0.95);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  animation: fadeIn 1s ease-in;
+}
+
+.popup-content {
+  background-color: #fef7fb;
+  padding: 30px 40px;
+  border: 3px dashed #d99acb;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(200, 160, 200, 0.3);
+}
+
+.popup-content button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #a07bd1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Sparkles */
+.sparkle {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: radial-gradient(circle, #d99acb 0%, transparent 70%);
+  border-radius: 50%;
+  animation: sparkleMove 6s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes sparkleMove {
+  0% { top: 100%; left: 5%; opacity: 0.8; }
+  50% { top: 50%; left: 45%; opacity: 0.3; }
+  100% { top: 0%; left: 80%; opacity: 0.7; }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  0% { opacity: 0; transform: translateX(-30px); }
+  100% { opacity: 1; transform: translateX(0); }
+}

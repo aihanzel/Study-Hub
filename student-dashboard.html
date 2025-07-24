@@ -1,0 +1,9 @@
+<p id="greeting"></p>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const studentName = params.get('username');
+  if (studentName) {
+    document.getElementById('greeting').textContent = `Welcome, ${studentName}! 🎓`;
+  }
+</script>
